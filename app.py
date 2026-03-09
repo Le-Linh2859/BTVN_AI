@@ -46,7 +46,7 @@ with tab1:
 
         tuition_debt = st.number_input(
             "Số tiền học phí còn nợ",
-            0.0, 100000.0, 0.0
+            0.0, 100000000.0, 0.0
         )
 
     with col2:
