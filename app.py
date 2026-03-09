@@ -158,10 +158,10 @@ if st.button("🔎 Dự đoán trạng thái học tập", use_container_width=T
     st.subheader("Kết quả dự đoán")
 
     if pred == 0:
-        st.success("Sinh viên thuộc nhóm: HỌC TẬP BÌNH THƯỜNG")
+        st.success("Sinh viên thuộc nhóm: NORMAL")
 
     elif pred == 1:
-        st.warning("Sinh viên thuộc nhóm: CẢNH BÁO HỌC VỤ")
+        st.warning("Sinh viên thuộc nhóm: ACADEMIC WARNING")
 
     else:
-        st.error("Sinh viên thuộc nhóm: NGUY CƠ THÔI HỌC")
+        st.error("Sinh viên thuộc nhóm: DROP OUT")
