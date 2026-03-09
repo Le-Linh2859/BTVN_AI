@@ -8,20 +8,20 @@ import joblib as jb
 model = jb.load("model.pkl")
 
 st.set_page_config(
-    page_title="Dự đoán trạng thái học tập",
+    page_title="Cảnh báo học vụ cho sinh viên",
     layout="wide"
 )
 
-st.title("🎓 Hệ thống dự đoán trạng thái học tập sinh viên")
+st.title("🎓 Hệ thống dự đoán Cảnh báo học vụ cho sinh viên")
 
 st.write(
 """
 Ứng dụng sử dụng mô hình Machine Learning để dự đoán nguy cơ học tập của sinh viên.
 
 Kết quả:
-- 0 → Học tập bình thường
-- 1 → Cảnh báo học vụ
-- 2 → Nguy cơ thôi học
+- 0 → Normal
+- 1 → Academic Warning
+- 2 → Dropout
 """
 )
 
