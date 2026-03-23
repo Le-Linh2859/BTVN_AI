@@ -8,20 +8,20 @@ import joblib as jb
 model = jb.load("model.pkl")
 
 st.set_page_config(
-    page_title="Dự đoán trạng thái học tập",
+    page_title="Cảnh báo học vụ cho sinh viên",
     layout="wide"
 )
 
-st.title("🎓 Hệ thống dự đoán trạng thái học tập sinh viên")
+st.title("🎓 Hệ thống dự đoán Cảnh báo học vụ cho sinh viên")
 
 st.write(
 """
 Ứng dụng sử dụng mô hình Machine Learning để dự đoán nguy cơ học tập của sinh viên.
 
 Kết quả:
-- 0 → Học tập bình thường
-- 1 → Cảnh báo học vụ
-- 2 → Nguy cơ thôi học
+- 0 → Normal
+- 1 → Academic Warning
+- 2 → Dropout
 """
 )
 
@@ -46,7 +46,7 @@ with tab1:
 
         tuition_debt = st.number_input(
             "Số tiền học phí còn nợ",
-            0.0, 100000.0, 0.0
+            0.0, 100000000.0, 0.0
         )
 
     with col2:
@@ -158,10 +158,10 @@ if st.button("🔎 Dự đoán trạng thái học tập", use_container_width=T
     st.subheader("Kết quả dự đoán")
 
     if pred == 0:
-        st.success("Sinh viên thuộc nhóm: HỌC TẬP BÌNH THƯỜNG")
+        st.success("Sinh viên thuộc nhóm: NORMAL")
 
     elif pred == 1:
-        st.warning("Sinh viên thuộc nhóm: CẢNH BÁO HỌC VỤ")
+        st.warning("Sinh viên thuộc nhóm: ACADEMIC WARNING")
 
     else:
-        st.error("Sinh viên thuộc nhóm: NGUY CƠ THÔI HỌC")
+        st.error("Sinh viên thuộc nhóm: DROP OUT")
