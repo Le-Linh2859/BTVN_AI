@@ -5,7 +5,7 @@ import joblib as jb
 # =========================
 # Load model
 # =========================
-model = jb.load("model.pkl")
+model = jb.load("catboost_model.pkl")
 
 st.set_page_config(
     page_title="Cảnh báo học vụ cho sinh viên",
